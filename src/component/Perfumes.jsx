@@ -16,7 +16,7 @@ const Perfumes = () => {
                             <img src={product.image} alt="" className='md:w-90 md:h-115 w-16 h-20' />
                         </div>
                         <div className='md:text-sm text-vs font-semibold md:mt-5 mt-2 '>
-                            <p className='truncate ... w-135'>{product.name}</p>
+                            <p className='truncate ... md:w-135 w-20'>{product.name}</p>
                             <p className='font-semibold'>&#8358; {product.price}</p>
                         </div>
                         <div className='flex md:mt-6 mt-2 md:text-sm text-vs'>
