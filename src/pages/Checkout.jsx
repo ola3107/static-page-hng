@@ -1,6 +1,11 @@
 import { IoArrowBackSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Checkout = () => {
+    const subTotal = useSelector(state => state.subTotal)
+    const Transaction = useSelector(state => state.Transaction)
+    const deliveryFee = useSelector(state => state.deliveryFee)
+    const total = useSelector(state => state.total)
   return (
     <section>
         <header className="flex justify-between md:px-16 px-6 py-5">
@@ -37,21 +42,21 @@ const Checkout = () => {
                 <h1 className="md:text-lg text-sm font-semibold">Payment Summary</h1>
             </div>
             <div className="px-6 md:px-16 mt-6 md:mt-11">
-                <div className="max-w-3xl flex justify-between md:mt-3">
+                <div className="max-w-3xl font-semibold flex justify-between md:mt-3">
                     <p>SubTotal</p>
-                    <p>&#8358;218000</p>
+                    <p>&#8358;{subTotal}</p>
                 </div>
-                <div className="max-w-3xl flex justify-between md:mt-3">
+                <div className="max-w-3xl font-semibold flex justify-between md:mt-3">
                     <p>Transaction Fee</p>
-                    <p>&#8358;5750</p>
+                    <p>&#8358;{Transaction}</p>
                 </div>
-                <div className="max-w-3xl flex justify-between md:mt-3">
+                <div className="max-w-3xl font-semibold flex justify-between md:mt-3">
                     <p>Delivery</p>
-                    <p>&#8358;3550</p>
+                    <p>&#8358;{deliveryFee}</p>
                 </div>
-                <div className="max-w-3xl flex justify-between md:mt-3">
+                <div className="max-w-3xl font-semibold flex justify-between md:mt-3">
                     <p>Total</p>
-                    <p>&#8358;227300</p>
+                    <p>&#8358;{total}</p>
                 </div>
             </div>
         </div>

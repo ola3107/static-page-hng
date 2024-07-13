@@ -5,8 +5,10 @@ import { IoMdMenu } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import mobileLogo from '../assets/F.png'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+    const cartLength = useSelector((state) => state.cartLength);
   return (
     <header className='md:px-14 px-5 md:py-1 py-3 md:bg-lightCustombrown'>
         <div className='flex justify-between items-center md:mt-3.5'>
@@ -23,7 +25,10 @@ const Header = () => {
             </div>
             <div className='md:w-24 flex justify-between w-14 '>
                 <button><img src={user} alt="" className='md:w-6 md-h-6 w-4' /></button>
-                <button><Link to="/cart"><img src={cart} alt="" className='md:w-6 md-h-6 w-4' /></Link></button>
+                <div>
+                    <button className='mt-1'><Link to="/cart"><img src={cart} alt="" className='md:w-6 md-h-6 w-4' /></Link></button>
+                    <span className="text-xs px-1 absolute rounded border bg-customBrown text-white">{cartLength}</span>
+                </div>
             </div>
         </div>
         <div className='hidden md:block'>
