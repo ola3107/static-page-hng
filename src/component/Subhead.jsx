@@ -1,4 +1,3 @@
-
 const Subhead = () => {
     return (
         <div className="flex justify-center md:mt-6 mt-3.5 px-7">

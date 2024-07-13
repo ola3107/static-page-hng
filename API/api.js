@@ -24,7 +24,6 @@ export const getSingleProduct = async (id) => {
     return data;
 };
 
-// https://api.timbu.cloud/products/e523a711d8ae4505ae3c53dbf61b8804?organization_id=05f5711a01a14eabba00efa43bfc4610&Appid=B8606M2O0SMB0T5&Apikey=faf205389bf4402a894f401ff29efdb520240712134402740587
 
 
     
